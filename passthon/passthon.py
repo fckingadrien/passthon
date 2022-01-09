@@ -1,8 +1,14 @@
+
+# passthon 0.0.1
+# By Adrián Fernández
+
+# This library is still under development, excuse the mistakes!
+
 class password():
     
-    password = ''
-    passwords = []
-        
+    password = ''       # for a single password. Empty by default.
+    passwords = []      # for multiple passwords. Empty by default.
+    
     def __init__(self, length, lc=True, uc=False, num=True, sym=False): 
         import string
         self.length = int(length)
@@ -10,19 +16,19 @@ class password():
         self.uppercase = bool(uc)
         self.num = bool(num)
         self.sym = bool(sym)
+        
         chars = []
         
-        
         if self.lowercase:
-            chars.append(string.ascii_lowercase)
+            chars.append(string.ascii_lowercase)  # abcdefghijklmnopqrstuvwxyz
         if self.uppercase:
-            chars.append(string.ascii_uppercase)
+            chars.append(string.ascii_uppercase)  # ABCDEFGHIJKLMNOPQRSTUVWXYZ
         if self.num:
-            chars.append(string.digits)
+            chars.append(string.digits)           # 0123456789
         if self.sym:
             chars.append('#$%&@!?*._-')
         self.chars = chars = ''.join(chars)
-        
+            
     def gen(self):
         from random import choice
         self.password = ''
