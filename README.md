@@ -36,10 +36,11 @@ mypassword = passthon.password(length[,options])
 | ***sym*** | bool  | Include lowercase characters.|Defaults to `False`
 
 **Example:**
+
 This example corresponds to a 10-character password with only uppercase letters and numbers.  
-Remember that **lc** and **num** parameters are True by default.
 ```python
 mypassword = passthon.password(10, lc=False, uc=True)
+# Remember that lc and num parameters are True by default.
 ```
 
 ### Functions
