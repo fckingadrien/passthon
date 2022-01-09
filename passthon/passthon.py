@@ -44,7 +44,8 @@ class password():
             
     def print(self):
         if self.passwords != []:
-            print(self.passwords)
+            for i in self.passwords:
+                print(i)
         elif self.password == '':
-            self.generate()
+            self.gen()
         print(self.password)
