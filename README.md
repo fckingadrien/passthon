@@ -1,5 +1,5 @@
 
-# passthon
+# passthon 0.0.1
 
 passthon is a Python library for easily generating random passwords.
 
